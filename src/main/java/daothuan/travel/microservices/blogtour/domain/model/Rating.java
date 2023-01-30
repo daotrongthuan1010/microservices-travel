@@ -1,17 +1,17 @@
 package daothuan.travel.microservices.blogtour.domain.model;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
+
+import java.io.Serializable;
 
 @Entity
-@Data
+@Getter
+@Setter
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class Rating {
+public class Rating extends AuditLog  {
     @Id
     @GeneratedValue(strategy =  GenerationType.IDENTITY)
     private Long id;

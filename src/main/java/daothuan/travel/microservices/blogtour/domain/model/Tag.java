@@ -7,11 +7,10 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Entity
-@Data
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class Tag {
+public class Tag extends AuditLog {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

@@ -3,12 +3,15 @@ package daothuan.travel.microservices.blogtour.domain.model;
 import jakarta.persistence.*;
 import lombok.*;
 
-@Data
+import java.io.Serializable;
+
+@Getter
+@Setter
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-public class Post {
+public class Post extends AuditLog  {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

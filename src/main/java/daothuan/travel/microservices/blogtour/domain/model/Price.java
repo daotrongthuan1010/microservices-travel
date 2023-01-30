@@ -1,19 +1,18 @@
 package daothuan.travel.microservices.blogtour.domain.model;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
+import java.io.Serializable;
 import java.time.LocalDateTime;
 
 @Entity
 @AllArgsConstructor
 @NoArgsConstructor
-@Data
+@Getter
+@Setter
 @Builder
-public class Price {
+public class Price extends AuditLog  {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

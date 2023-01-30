@@ -1,18 +1,18 @@
 package daothuan.travel.microservices.blogtour.domain.model;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 import org.springframework.web.multipart.MultipartFile;
+
+import java.io.Serializable;
 
 @Entity
 @AllArgsConstructor
 @NoArgsConstructor
-@Data
+@Getter
+@Setter
 @Builder
-public class Image {
+public class Image extends AuditLog {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
